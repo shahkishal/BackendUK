@@ -32,46 +32,46 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 
-//builder.Services.AddDbContext<TripDbContext>(option =>
-//option.UseSqlServer(builder.Configuration.GetConnectionString("TripConnectionString")));
+builder.Services.AddDbContext<TripDbContext>(option =>
+option.UseSqlServer(builder.Configuration.GetConnectionString("TripConnectionString")));
 
-//builder.Services.AddDbContext<TripAuthDbContext>(option =>
-//option.UseSqlServer(builder.Configuration.GetConnectionString("TripAuthConnectionString")));
+builder.Services.AddDbContext<TripAuthDbContext>(option =>
+option.UseSqlServer(builder.Configuration.GetConnectionString("TripAuthConnectionString")));
 
-//builder.Services.AddDbContext<LikeDbContext>(option =>
-//option.UseSqlServer(builder.Configuration.GetConnectionString("LikeAuthConnectionString")));
+builder.Services.AddDbContext<LikeDbContext>(option =>
+option.UseSqlServer(builder.Configuration.GetConnectionString("LikeAuthConnectionString")));
 
-//builder.Services.AddDbContext<CommentDbContext>(option =>
-//option.UseSqlServer(builder.Configuration.GetConnectionString("CommentAuthConnectionString")));
+builder.Services.AddDbContext<CommentDbContext>(option =>
+option.UseSqlServer(builder.Configuration.GetConnectionString("CommentAuthConnectionString")));
 
 //-------------------------------------Uday cu ----------------------------------------
 
-builder.Services.AddDbContext<TripDbContext>(options =>
-{
+//builder.Services.AddDbContext<TripDbContext>(options =>
+//{
 
-    options.UseNpgsql(builder.Configuration.GetConnectionString("TripConnectionString1"));
-});
-
-
-builder.Services.AddDbContext<TripDbContext>(options =>
-{
-
-    options.UseNpgsql(builder.Configuration.GetConnectionString("TripAuthConnectionString1"));
-});
+//    options.UseNpgsql(builder.Configuration.GetConnectionString("TripConnectionString1"));
+//});
 
 
-builder.Services.AddDbContext<TripDbContext>(options =>
-{
+//builder.Services.AddDbContext<TripDbContext>(options =>
+//{
 
-    options.UseNpgsql(builder.Configuration.GetConnectionString("LikeAuthConnectionString1"));
-});
+//    options.UseNpgsql(builder.Configuration.GetConnectionString("TripAuthConnectionString1"));
+//});
 
 
-builder.Services.AddDbContext<TripDbContext>(options =>
-{
+//builder.Services.AddDbContext<TripDbContext>(options =>
+//{
 
-    options.UseNpgsql(builder.Configuration.GetConnectionString("CommentAuthConnectionString1"));
-});
+//    options.UseNpgsql(builder.Configuration.GetConnectionString("LikeAuthConnectionString1"));
+//});
+
+
+//builder.Services.AddDbContext<TripDbContext>(options =>
+//{
+
+//    options.UseNpgsql(builder.Configuration.GetConnectionString("CommentAuthConnectionString1"));
+//});
 
 //-------------------------------------Uday cu ----------------------------------------
 
