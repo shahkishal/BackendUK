@@ -32,17 +32,48 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 
-builder.Services.AddDbContext<TripDbContext>(option => 
+builder.Services.AddDbContext<TripDbContext>(option =>
 option.UseSqlServer(builder.Configuration.GetConnectionString("TripConnectionString")));
 
-builder.Services.AddDbContext<TripAuthDbContext>(option => 
+builder.Services.AddDbContext<TripAuthDbContext>(option =>
 option.UseSqlServer(builder.Configuration.GetConnectionString("TripAuthConnectionString")));
 
-builder.Services.AddDbContext<LikeDbContext>(option => 
+builder.Services.AddDbContext<LikeDbContext>(option =>
 option.UseSqlServer(builder.Configuration.GetConnectionString("LikeAuthConnectionString")));
 
-builder.Services.AddDbContext<CommentDbContext>(option => 
+builder.Services.AddDbContext<CommentDbContext>(option =>
 option.UseSqlServer(builder.Configuration.GetConnectionString("CommentAuthConnectionString")));
+
+//-------------------------------------Uday cu ----------------------------------------
+//PostgreSQL
+//builder.Services.AddDbContext<TripDbContext>(options =>
+//{
+
+//    options.UseNpgsql(builder.Configuration.GetConnectionString("TripConnectionString1"));
+//});
+
+
+//builder.Services.AddDbContext<TripDbContext>(options =>
+//{
+
+//    options.UseNpgsql(builder.Configuration.GetConnectionString("TripAuthConnectionString1"));
+//});
+
+
+//builder.Services.AddDbContext<TripDbContext>(options =>
+//{
+
+//    options.UseNpgsql(builder.Configuration.GetConnectionString("LikeAuthConnectionString1"));
+//});
+
+
+//builder.Services.AddDbContext<TripDbContext>(options =>
+//{
+
+//    options.UseNpgsql(builder.Configuration.GetConnectionString("CommentAuthConnectionString1"));
+//});
+
+//-------------------------------------Uday cu ----------------------------------------
 
 builder.Services.AddScoped<ITripRepository, TripRepository>();
 builder.Services.AddScoped<ITravelTypeRepository,TravelTypeRepository>();
