@@ -1,0 +1,87 @@
+#################################
+# Windows OS-specific files
+#################################
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+#################################
+# Visual Studio
+#################################
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.VC.db
+*.VC.VC.opendb
+
+#################################
+# ASP.NET / C# Build Folders
+#################################
+bin/
+obj/
+out/
+[Bb]uild/
+[Ll]og/
+
+#################################
+# ASP.NET Publish Output
+#################################
+wwwroot/
+*.Publish.xml
+
+#################################
+# NuGet Packages
+#################################
+*.nupkg
+packages/
+*.snupkg
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+#################################
+# Logs & Cache
+#################################
+*.log
+*.tlog
+*.cache
+*.pdb
+
+#################################
+# Database Files
+#################################
+*.mdf
+*.ldf
+*.dbmdl
+*.bak
+
+#################################
+# Others
+#################################
+*.tmp
+*.temp
+*.bak
+*.old
+*.orig
+*.scc
+
+#################################
+# Rider/JetBrains IDE (if used)
+#################################
+.idea/
+*.sln.iml
+
+#################################
+# Web Specific
+#################################
+.env
+node_modules/
+bower_components/
+
+# Optional: Uncomment if using Docker
+# docker-compose.override.yml
+# **/Dockerfile
